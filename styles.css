@@ -1,7 +1,7 @@
 .bayan {
     margin: auto;
     width: 50%;
-    background-color: aqua;
+    background-color: #004cff;
 }
 
 .acc__content {
@@ -12,6 +12,43 @@
 .acc__input {
     display: none;
 }
+
+
+.acc__label {
+    display: block;
+    padding: 8px 22px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    color: #FFF;
+    transition: ease 0.5s;
+    position: relative;
+}
+
+.acc__label:hover:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23004cff99;" /></svg>');
+    background-size: contain;
+    transition: transform 0.4s;
+  }
+
+  .acc__input:checked ~ .acc__label:after {
+    transform: translateY(-50%) rotate(0.5turn);
+  }
+
+.acc__label:hover {
+    background: #ff6a00;
+    
+}
+
+
 .acc__input:checked ~ .acc__content {
     content: "";
     display: block;
@@ -20,9 +57,12 @@
 p, h1, .acc__label {
     text-align: left;
     padding-left: 50px;
+    color: red;
+    font-weight: bold;
 }
 
 img {
     display: block;
     margin: auto;
 }
+
