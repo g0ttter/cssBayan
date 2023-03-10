@@ -1,0 +1,28 @@
+.bayan {
+    margin: auto;
+    width: 50%;
+    background-color: aqua;
+}
+
+.acc__content {
+    display: none;
+    background-color: black;
+}
+
+.acc__input {
+    display: none;
+}
+.acc__input:checked ~ .acc__content {
+    content: "";
+    display: block;
+}
+
+p, h1, .acc__label {
+    text-align: left;
+    padding-left: 50px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
