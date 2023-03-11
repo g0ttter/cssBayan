@@ -4,9 +4,14 @@
     background-color: #004cff;
 }
 
+
+
 .acc__content {
-    display: none;
+    /* display: none; */
     background-color: black;
+    max-height: 0;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
 }
 
 .acc__input {
@@ -26,10 +31,14 @@
     position: relative;
 }
 
+.acc__label:active {
+    opacity: 0.2;
+}
+
 .acc__label:hover:after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 10px;
     transform: translateY(-50%);
     right: 20px;
     width: 12px;
@@ -42,6 +51,8 @@
   .acc__input:checked ~ .acc__label:after {
     transform: translateY(-50%) rotate(0.5turn);
   }
+  
+
 
 .acc__label:hover {
     background: #ff6a00;
@@ -49,8 +60,9 @@
 }
 
 
-.acc__input:checked ~ .acc__content {
+.acc__input:checked ~ .acc__label .acc__content  {
     content: "";
+    max-height: 400px;
     display: block;
 }
 
@@ -66,3 +78,13 @@ img {
     margin: auto;
 }
 
+img:hover {
+    transform: skew(30deg, 20deg);
+    transition: 0.5s
+}
+
+.bayan:hover {
+    cursor: pointer;
+    border: red outset 300px;
+    transition: all 1s ease-in-out;
+}
