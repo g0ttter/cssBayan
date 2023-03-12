@@ -1,14 +1,74 @@
-.bayan {
-    margin: auto;
-    width: 50%;
-    background-color: #004cff;
+@media only screen and (width > 320px) {
+    html  {
+    font-size: 1.2rem;
+    }
 }
 
+@media only screen and (width > 820px) {
+    html  {
+    font-size: 1.4rem;
+    }
+    .bayan {
+        width: 70% !important;
+        height: 40vh;
+    }
+}
 
+@media only screen and (width > 1920px) {
+    html  {
+    font-size: 1.7rem;
+    }
+    .bayan {
+        width: 50% !important;
+        height: 90vh;
+    }
+}
+
+@media (hover: hover)  {
+    .acc__input:hover ~ .acc__label .acc__content  {
+        content: "";
+        max-height: 10rem;
+        display: block;
+    }
+
+    .acc__label:hover:after {
+        /* content: "";
+        position: absolute;
+        top: 10px;
+        transform: translateY(-50%);
+        right: 20px;
+        width: 12px;
+        height: 6px;
+        background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23004cff99;" /></svg>');
+        background-size: contain;
+        transition: transform 0.4s; */
+        
+      }
+
+      .acc__label:hover {
+        background: #ff6a00;
+    }
+    img:hover {
+        transform: skew(30deg, 20deg);
+        transition: 0.5s
+    }
+    
+    .bayan:hover * {
+        cursor: pointer;
+        color: green;
+        transition: all 0.3s ease-in-out;
+    }
+ }
+
+.bayan {
+    margin: auto;
+    width: 90%;
+    background-color: #22cf12;
+    height: 90vh;
+}
 
 .acc__content {
-    /* display: none; */
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     max-height: 0;
     transition: all 1s ease-in-out;
     overflow: hidden;
@@ -18,15 +78,13 @@
     display: none;
 }
 
-
 .acc__label {
     display: block;
-    padding: 8px 22px;
-    margin: 0 0 1px 0;
+    padding: 1vh 2vh;
+    margin-top: 0.1em;
     cursor: pointer;
     background: rgb(255, 255, 255);
-    border-radius: 3px;
-    color: #FFF;
+    color: #ff0202;
     transition: ease 0.5s;
     position: relative;
 }
@@ -35,40 +93,23 @@
     opacity: 0.2;
 }
 
-.acc__label:hover:after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    transform: translateY(-50%);
-    right: 20px;
-    width: 12px;
-    height: 6px;
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23004cff99;" /></svg>');
-    background-size: contain;
-    transition: transform 0.4s;
-  }
-
   .acc__input:checked ~ .acc__label:after {
     transform: translateY(-50%) rotate(0.5turn);
   }
-  
-
-
-.acc__label:hover {
-    background: #ff6a00;
-    
-}
-
 
 .acc__input:checked ~ .acc__label .acc__content  {
     content: "";
-    max-height: 400px;
+    max-height: 10rem;
     display: block;
+}
+
+.acc__input:checked ~ .acc__label {
+    color: green;
 }
 
 p, h1, .acc__label {
     text-align: left;
-    padding-left: 50px;
+    padding-left: 2rem;
     color: red;
     font-weight: bold;
 }
@@ -76,15 +117,6 @@ p, h1, .acc__label {
 img {
     display: block;
     margin: auto;
-}
-
-img:hover {
-    transform: skew(30deg, 20deg);
-    transition: 0.5s
-}
-
-.bayan:hover {
-    cursor: pointer;
-    border: red outset 300px;
-    transition: all 1s ease-in-out;
+    max-height: 10rem;
+    width: auto;
 }
