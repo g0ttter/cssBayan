@@ -1,42 +1,36 @@
 @media only screen and (width > 320px) {
     html  {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     }
 }
 
 @media only screen and (width > 820px) {
     html  {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     }
     .bayan {
         width: 70% !important;
-        height: 40vh;
     }
 }
 
 @media only screen and (width > 1920px) {
     html  {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     }
     .bayan {
         width: 50% !important;
-        height: 90vh;
     }
 }
 
 @media (hover: hover)  {
     .acc__input:hover ~ .acc__label .acc__content  {
-        content: "";
         max-height: 10rem;
         display: block;
     }
 
-      .acc__label:hover {
-        background: #ff6a00;
-    }
-    img:hover {
-        transform: skew(30deg, 20deg);
-        transition: 0.5s
+    .meme:hover {
+        transform: skew(20deg, 360deg);
+        transition: 0.5s ease-in-out;
     }
     
     .bayan:hover * {
@@ -45,11 +39,21 @@
         transition: all 0.3s ease-in-out;
     }
 
+    .bayan:hover * .icon {
+        display: inline;
+    }
+
     .acc__input:hover ~ .acc__label .text .icon  {
         transform: rotate(900deg);
         transition: 0.5s;
+        display: inline;
     }
  }
+
+ body {
+    font-family: "Sofia", sans-serif;
+    font-size: 1rem;
+  }
 
  .acc__input:checked ~ .acc__label .text .icon  {
     transform: rotate(900deg);
@@ -57,9 +61,8 @@
 
 .bayan {
     margin: auto;
-    width: 90%;
+    width: 80%;
     background-color: #22cf12;
-    height: 90vh;
 }
 
 .acc__content {
@@ -81,16 +84,11 @@
     background: rgb(255, 255, 255);
     color: #ff0202;
     transition: ease 0.5s;
-    position: relative;
 }
 
 .acc__label:active {
     opacity: 0.2;
 }
-
-  .acc__input:checked ~ .acc__label:after {
-    transform: translateY(-50%) rotate(0.5turn);
-  }
 
 .acc__input:checked ~ .acc__label .acc__content  {
     content: "";
@@ -102,7 +100,7 @@
     color: green;
 }
 
-p, h1, .acc__label {
+p, h2, .acc__label {
     text-align: left;
     padding-left: 2rem;
     color: red;
@@ -110,18 +108,24 @@ p, h1, .acc__label {
     padding-bottom: 0;
 }
 
-img {
+h2 {
+    color: green !important;
+}
+
+.meme {
     display: block;
     margin: auto;
-    max-height: 10rem;
-    width: auto;
+    max-height: 9rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 .icon {
     display: inline;
-    max-height: 2em;
+    max-height: 2rem;
     padding: 0;
     margin: 0;
+    display: none;
 }
 
 .text {
@@ -129,4 +133,5 @@ img {
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    height: 2rem;
 }
