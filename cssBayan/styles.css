@@ -49,8 +49,6 @@
         transform: rotate(900deg);
         transition: 0.5s;
     }
-
-
  }
 
  .acc__input:checked ~ .acc__label .text .icon  {
@@ -61,7 +59,7 @@
     margin: auto;
     width: 90%;
     background-color: #22cf12;
-    height: 70vh;
+    height: 90vh;
 }
 
 .acc__content {
@@ -109,6 +107,7 @@ p, h1, .acc__label {
     padding-left: 2rem;
     color: red;
     font-weight: bold;
+    padding-bottom: 0;
 }
 
 img {
